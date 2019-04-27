@@ -1,7 +1,179 @@
-.la-nav{
-    border-radius:0px !important; 
+.container{
+    width: 1000px;
+    .brand{
+        display: inline-block;
+        margin:7px  0 0 14;
+    }
+    .language .dropdown-menu{
+        background: #222;
+        li a{
+            color: #9d9d9d;
+            &:hover{
+                background: #222;
+                color: #fff;
+            }
+        }
+    }
+    
 }
-.list-box{
-    background-color: #fbfaf7;
-    margin:  0 10%;
+.banner{
+    margin-top:-13px; 
+    .carousel .item img{
+        width: 100%;
+        height: 657px;
+    }
+}
+$colorBase:(
+    engine:#0078d7,
+    adv: #8fc31f,
+    lightgray: #666,
+    darkgray: #333
+);
+@mixin fontBase($fontSize, $color) {
+    font-size: $fontSize;
+    color: map-get($colorBase, $color);
+}
+
+.engine{
+    padding:100px 0 40px;
+    background: #fbfaf7;
+    .left { 
+        h2 {
+            @include fontBase(48px, engine);
+        }
+        .small {
+            @include fontBase(30px, lightgray);
+            padding: 24px 0 80px;
+        }
+        .list {
+           .item {
+               padding-bottom: 50px;
+               h3 {
+                   @include fontBase(20px, darkgray);
+                   margin: 0 0 7px;
+               }
+               p{
+                   @include fontBase(14px, lightgray );
+                   line-height: 25px;
+               }
+               img {
+                   width: 64px;
+                   max-width: 64px;
+                   height: 64px;
+                   background: map-get($colorBase, engine);
+                   padding:0 15px;
+               }
+           } 
+        }
+    }
+    .right {
+        img {
+            padding-top: 50px;
+            width: 366px;
+            height: 464px;
+        }
+    }
+}
+.adv {
+    padding: 89px 0;
+    .left {
+        img {
+            width: 309px;
+            max-width: 309px;
+            height: 396px;
+            padding-top: 101px;
+        }
+    }
+    .right {
+        h2 {
+            @include fontBase(48px, adv);
+            padding: 8px 0 34px;
+        }
+        .list {
+            .item {
+                padding-bottom: 16px;
+                p{
+                    @include fontBase(14px, lightgray );
+                    line-height: 55px;
+                    &:before {
+                        content: '';
+                        width: 55px;
+                        height: 55px;
+                        display: inline-block;
+                        float: left;
+                        border-radius: 50%;
+                        background: map-get($colorBase, adv) url(../images/adv-list.png) no-repeat;
+                        margin: 0 11px 0 7px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+$contact:(0:".email",58:".wx",116:".qq");
+.link {
+    display: inline-block;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    margin: 0 10px;
+}
+@mixin link (
+        $name,
+        $left
+    ){
+        #{$name}{
+            @extend .link;
+            background:url(../images/contact.png) no-repeat #{$left} 0;
+        }
+}
+.footer {
+    background: #3b3b3b;
+    padding: 35px 0 35px;
+    .left {
+        padding-left: 7px;
+        nav {
+            a {
+                display: inline-block;
+                padding: 0 13px;
+                color: #a1a3ab;
+                font-size: 14px; 
+            }
+        }
+        p{
+            padding: 14px 0 0 13px;
+            color:#a1a3ab;
+            font-size:12px;
+            margin-bottom:0;
+        }
+    }
+    .right {
+        padding-right: 5px;
+        @each $offset in map-keys($contact){
+            @include link( map-get($contact, $offset), #{-1px*$offset} );
+        }
+
+    }
+}
+$viewports: (1:320px, 2:375px, 3:425px, 4:768px, 5: 990px);
+@each $key in map-keys($viewports){
+    @media (min-width: map-get($viewports, $key) ) {
+        .container {
+            width: map-get($viewports, $key);
+        }
+        @if $key == 5 {
+            .container {
+                width: 800px;
+            }
+        }
+        @if $key == 1 {
+            .footer p{
+                text-align: center;
+            }
+            .engine .left {
+                text-align: center;
+            }
+        }
+    }
 }

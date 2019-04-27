@@ -50,7 +50,7 @@
             </a>
             <ul class="dropdown-menu">
               <li><a href="#">中文</a></li>
-              <li><a href="#">英文</a></li>
+              <li><a href="#">English</a></li>
             </ul>
           </li>
         </ul>
@@ -184,16 +184,15 @@
                             转换为HTML5和APP游戏
                          </p>
                        </div>
-                       
                     </div>
-      
                   </div>
-                  <div class="col-md-4 right hidden-xs">
-                    <img src="images/engine-bg.png">
-                  </div>
-            
           </div>
+         
           
+          
+        </div>
+        <div class="col-md-4 right hidden-xs">
+          <img src="images/engine-bg.png">
         </div>
         
       </div>
@@ -201,12 +200,78 @@
     </div>
 
   </div>
-<div class="adv">
-  <div class="container">
-    <div class="row"></div>
-  </div>
+  <div class="adv">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 left">
+            <img src="images/adv-bg.png" alt="" class="img-responsive">
+          </div>
+          <div class="col-md-7 col-md-push-1 col-xs-12">
+            <h2>LayaBox 优势</h2>
+            <div class="row list">
+                <div class="col-md-12 item">
+                  <p>快速上手，Flash程序员3小时掌握HTML5开发</p>
+                </div>
+                <div class="col-md-12 item">
+                    <p>快速上手，Flash程序员3小时掌握HTML5开发</p>
+                    
+                </div>
+                <div class="col-md-12 item">
+                    <p>快速上手，Flash程序员3小时掌握HTML5开发</p>
+                    
+                </div>
+                <div class="col-md-12 item">
+                    <p>快速上手，Flash程序员3小时掌握HTML5开发</p>
+                    
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 </div>
-
+<div class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-9 col-xs-12 left">
+                <nav class="row text-center">
+                    <a href="" class="col-xs-4">公司简介</a>
+                    <a href="" class="col-xs-4" >公司简介</a>
+                    <a href="" class="col-xs-4">公司简介</a>
+                </nav>
+                <p>All Copyright Reserved by Layabox Inc. 京ICP备15008163号-1 </p>
+            </div>
+            <div class="col-md-3 col-xs-12 right">
+                <div class="row">
+                    <div class="col-md-4 col-xs-4">
+                        <button type="button" data-toggle="popover" data-placement="top" data-title="" class="email"></button>
+                    </div>
+                    <div class="col-md-4 col-xs-4">
+                        <button type="button" data-toggle="popover" data-placement="top"  class="wx"></button>
+                    </div>
+                    <div class="col-md-4 col-xs-4">
+                        <button type="button" class="qq"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    window.onload = function() {
+        $('.email').popover({
+            html: true,
+            trigger: 'hover',
+            content: '<img src="images/qcode.png" />'
+        })
+        $('.wx').popover( {
+            html: true,
+            trigger: 'hover',
+            content: '<img src="images/qcode.png" />'
+        })
+        $('.qq').popover()
+    }
+</script>
 
 
 </body>
