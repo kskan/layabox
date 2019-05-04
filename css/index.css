@@ -69,6 +69,10 @@
   padding: 0 15px;
 }
 
+.engine .right {
+  margin-top: -43px;
+}
+
 .engine .right img {
   padding-top: 50px;
   width: 366px;
@@ -90,6 +94,8 @@
   font-size: 48px;
   color: #8fc31f;
   padding: 8px 0 34px;
+  color: #8fc31f;
+  font-size: 48px;
 }
 
 .adv .right .list .item {
@@ -111,6 +117,83 @@
   border-radius: 50%;
   background: #8fc31f url(../images/adv-list.png) no-repeat;
   margin: 0 11px 0 7px;
+}
+
+.in-gamelist {
+  background-color: #0079d7;
+  padding-top: 119px;
+  padding-bottom: 22px;
+  color: white;
+}
+
+.in-gamelist > div > div > div {
+  margin-bottom: 80px;
+}
+
+.in-gamelist h2 {
+  text-align: center;
+  margin: 0 0 84px  0;
+  font-size: 48px;
+}
+
+.in-gamelist h3 {
+  margin: 0 0 28px 0;
+  font-size: 31px;
+}
+
+.in-gamelist p {
+  line-height: 26px;
+}
+
+.in-gamelist img {
+  width: 71px;
+  display: block;
+  margin: 0  auto 0;
+}
+
+.list {
+  padding: 82px 0 0 0;
+}
+
+.list h2 {
+  font-size: 32px;
+  margin-bottom: 50px;
+}
+
+.list .video {
+  width: 317px;
+  display: block;
+  margin: auto;
+}
+
+.list img {
+  width: 67px;
+  display: block;
+  margin: auto;
+}
+
+.list p {
+  text-align: center;
+}
+
+.partner {
+  padding: 24px 0 52px 0;
+}
+
+.partner h2 {
+  font-size: 30px;
+  margin-bottom: 41px;
+}
+
+.partner .container img {
+  border: 1px solid #dddddd;
+  border-radius: 5px;
+  display: block;
+  margin: auto;
+}
+
+.partner .container div {
+  margin-bottom: 12px;
 }
 
 .link, .footer .right .email, .footer .right .wx, .footer .right .qq {
@@ -195,6 +278,6 @@
     width: 990px;
   }
   .container {
-    width: 800px;
+    width: 990px;
   }
 }

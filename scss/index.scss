@@ -67,6 +67,7 @@ $colorBase:(
         }
     }
     .right {
+        margin-top:-43px;
         img {
             padding-top: 50px;
             width: 366px;
@@ -88,6 +89,8 @@ $colorBase:(
         h2 {
             @include fontBase(48px, adv);
             padding: 8px 0 34px;
+            color: #8fc31f;
+            font-size: 48px;
         }
         .list {
             .item {
@@ -110,6 +113,80 @@ $colorBase:(
         }
     }
 }
+
+.in-gamelist{
+    background-color: #0079d7;
+    padding-top: 119px;
+    padding-bottom: 22px;
+    color: white;
+    &>div>div>div{
+        margin-bottom: 80px;
+    }
+    
+ h2{
+     text-align: center;
+     margin:0 0 84px  0;
+     font-size: 48px;
+     
+     
+ }
+ h3{
+     margin: 0 0 28px 0;
+     font-size: 31px;
+     
+ }
+ p{
+     line-height: 26px;
+     
+ }
+ img{
+     width: 71px;
+     display: block;
+     margin: 0  auto 0;
+ }
+}
+.list{
+    padding:82px 0 0 0;
+    h2{
+        font-size: 32px;
+        margin-bottom: 50px;
+    }
+    .video{
+        width: 317px;
+        display: block;
+        margin: auto;
+    }
+    img{
+        width: 67px;
+        display: block;
+        margin: auto;
+    }
+    p{
+        text-align: center;
+    }
+    
+}
+.partner{
+    padding:24px 0 52px 0 ;
+    h2{
+        font-size: 30px;
+    margin-bottom:41px;
+    }
+    .container{
+    img{
+        border: 1px solid #dddddd;
+        border-radius: 5px;
+        display: block;
+        margin: auto;
+         
+    }
+    div{
+        margin-bottom:12px;
+    }
+}
+}
+
+
 
 $contact:(0:".email",58:".wx",116:".qq");
 .link {
@@ -164,7 +241,7 @@ $viewports: (1:320px, 2:375px, 3:425px, 4:768px, 5: 990px);
         }
         @if $key == 5 {
             .container {
-                width: 800px;
+                width: 990px;
             }
         }
         @if $key == 1 {
